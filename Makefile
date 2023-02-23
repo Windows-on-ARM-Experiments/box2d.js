@@ -84,10 +84,10 @@ $(ACTIVE)/Box2D/Rope/b2Rope.o
 all: box2d.js box2d.wasm.js
 
 %.o: %.cpp
-	$(CXX) $(OPTS) -I$(ACTIVE) $< -o $@ -fno-exceptions -fno-rtti
+	$(CXX) $(OPTS) -r -I$(ACTIVE) $< -o $@ -fno-exceptions -fno-rtti
 
 box2d.o: $(OBJECTS)
-	$(CXX) $(OPTS) -I$(ACTIVE) -o $@ $(OBJECTS)
+	$(CXX) $(OPTS) -r -I$(ACTIVE) -o $@ $(OBJECTS)
 
 box2d_glue.cpp: $(ACTIVE).idl
 	$(PYTHON) $(EMSCRIPTEN)/tools/webidl_binder.py $(ACTIVE).idl box2d_glue
