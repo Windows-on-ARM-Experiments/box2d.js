@@ -1,6 +1,9 @@
 *.bc
+*.o
 box2d_glue.cpp
 box2d_glue.js
 /Makefile.local
 WebIDLGrammar.pkl
+package-lock.json
 parser.out
+node_modules/
